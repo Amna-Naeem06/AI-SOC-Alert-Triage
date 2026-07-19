@@ -1,0 +1,101 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.07.18",
+  "_id": "J0xudZ8BX8WoHJBLAyCV",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.100.201",
+      "name": "AmnaNaeem",
+      "id": "001"
+    },
+    "manager": {
+      "name": "ubuntu-VirtualBox"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "Cmd.Exe",
+          "image": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "parentProcessGuid": "{9ca86dbb-535c-6a5b-ce17-00000000a800}",
+          "description": "Windows Command Processor",
+          "logonGuid": "{9ca86dbb-1cd6-6a5b-7e0e-c10700000000}",
+          "parentCommandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\"",
+          "processGuid": "{9ca86dbb-8078-6a5b-7d19-00000000a800}",
+          "logonId": "0x7c10e7e",
+          "parentProcessId": "12536",
+          "processId": "19348",
+          "currentDirectory": "C:\\\\Users\\\\NAEEM_~1\\\\AppData\\\\Local\\\\Temp\\\\",
+          "utcTime": "2026-07-18 13:32:40.756",
+          "hashes": "MD5=1F4D18374A699452622E80F6D5BB743E,SHA256=65EC268ADD3973B6DCA64222985DA47CAEAEE44A340B0EC1466782914FD743D9,IMPHASH=010B165E4C37F484601D3DBD700C9423",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "company": "Microsoft Corporation",
+          "commandLine": "\\\"cmd.exe\\\" /c ipconfig /all &amp; netsh interface show interface &amp; arp -a &amp; nbtstat -n &amp; net config",
+          "integrityLevel": "High",
+          "fileVersion": "10.0.26100.8737 (WinBuild.160101.0800)",
+          "user": "AMNANAEEM\\\\amnanaeem",
+          "terminalSessionId": "3",
+          "parentUser": "AMNANAEEM\\\\amnanaeem"
+        },
+        "system": {
+          "eventID": "1",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-07-18 13:32:40.756\r\nProcessGuid: {9ca86dbb-8078-6a5b-7d19-00000000a800}\r\nProcessId: 19348\r\nImage: C:\\Windows\\System32\\cmd.exe\r\nFileVersion: 10.0.26100.8737 (WinBuild.160101.0800)\r\nDescription: Windows Command Processor\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: Cmd.Exe\r\nCommandLine: \"cmd.exe\" /c ipconfig /all & netsh interface show interface & arp -a & nbtstat -n & net config\r\nCurrentDirectory: C:\\Users\\NAEEM_~1\\AppData\\Local\\Temp\\\r\nUser: AMNANAEEM\\amnanaeem\r\nLogonGuid: {9ca86dbb-1cd6-6a5b-7e0e-c10700000000}\r\nLogonId: 0x7C10E7E\r\nTerminalSessionId: 3\r\nIntegrityLevel: High\r\nHashes: MD5=1F4D18374A699452622E80F6D5BB743E,SHA256=65EC268ADD3973B6DCA64222985DA47CAEAEE44A340B0EC1466782914FD743D9,IMPHASH=010B165E4C37F484601D3DBD700C9423\r\nParentProcessGuid: {9ca86dbb-535c-6a5b-ce17-00000000a800}\r\nParentProcessId: 12536\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \r\nParentUser: AMNANAEEM\\amnanaeem\"",
+          "version": "5",
+          "systemTime": "2026-07-18T13:32:40.7601448Z",
+          "eventRecordID": "2616",
+          "threadID": "6968",
+          "computer": "AmnaNaeem",
+          "task": "1",
+          "processID": "12096",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 4,
+      "description": "Windows command prompt started by an abnormal process",
+      "groups": [
+        "sysmon",
+        "sysmon_eid1_detections",
+        "windows"
+      ],
+      "mitre": {
+        "technique": [
+          "Windows Command Shell"
+        ],
+        "id": [
+          "T1059.003"
+        ],
+        "tactic": [
+          "Execution"
+        ]
+      },
+      "id": "92052"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1784381562.1910453",
+    "timestamp": "2026-07-18T18:32:42.528+0500"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-07-18T13:32:42.528Z"
+    ]
+  },
+  "sort": [
+    1784381562528
+  ]
+}
